@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detalles"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="a2dam.fila1.grupo.proyecto_trimestre_2_cafeteria.ActivityDetalles">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/tb_dt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_back"
+        android:id="@+id/ib_dt_volver"
+        app:layout_constraintTop_toTopOf="@+id/tb_dt"
+        app:layout_constraintBottom_toBottomOf="@+id/tb_dt"
+        app:layout_constraintLeft_toLeftOf="@+id/tb_dt"
+        android:background="#00000000"
+        android:layout_marginStart="@dimen/margin_general" />
+
+    <Button
+        android:text="@string/ad_confirmar_pedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_dt_confirmar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="@dimen/text_size_big"
+        android:background="@color/accent"
+        android:textColor="@color/blanco"
+        app:layout_constraintHorizontal_bias="0.54" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_general"
+        android:layout_marginEnd="@dimen/margin_general"
+        android:layout_marginStart="@dimen/margin_general"
+        android:layout_marginTop="@dimen/margin_general"
+        app:layout_constraintBottom_toTopOf="@+id/btn_dt_confirmar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_dt"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tv_dt_resumen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_resumen"
+            android:textStyle="normal|bold"
+            app:layout_constraintLeft_toLeftOf="@+id/lv_dt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ListView
+            android:id="@+id/lv_dt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/blanco"
+            android:elevation="@dimen/elevation_listview"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dt_espacio1"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/tv_dt_espacio1"
+            android:layout_width="8dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#979797"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/lv_dt"
+            app:layout_constraintRight_toRightOf="@+id/lv_dt"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dt_resumen" />
+
+        <TextView
+            android:id="@+id/tv_dt_espacio2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#979797"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintLeft_toLeftOf="@+id/lv_dt"
+            app:layout_constraintRight_toRightOf="@+id/lv_dt"
+            app:layout_constraintTop_toBottomOf="@+id/lv_dt" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6090826"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="263dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_general"
+            android:layout_marginTop="8dp"
+            android:text="@string/ad_hora_de_recogida"
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toTopOf="@+id/timePicker2"
+            app:layout_constraintLeft_toLeftOf="@+id/lv_dt"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TimePicker
+            android:id="@+id/timePicker2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:timePickerMode="spinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#979797"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dt_precio" />
+
+        <TextView
+            android:id="@+id/tv_dt_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/ad_total"
+            android:textAllCaps="true"
+            android:textColor="@color/negro"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal|bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_dt_precio"
+            app:layout_constraintRight_toLeftOf="@+id/tv_dt_precio" />
+
+        <TextView
+            android:id="@+id/tv_dt_eur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_general"
+            android:text="€"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/text_size_big"
+            android:textStyle="normal|bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_dt_precio"
+            app:layout_constraintRight_toRightOf="@+id/lv_dt" />
+
+        <TextView
+            android:id="@+id/tv_dt_precio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="000"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/text_size_big"
+            android:textStyle="normal|bold"
+            app:layout_constraintRight_toLeftOf="@+id/tv_dt_eur"
+            app:layout_constraintTop_toBottomOf="@+id/lv_dt" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
